@@ -1,0 +1,15 @@
+{{ template "header.html" . }}
+<h1>Linguagens de Programação e Duração</h1>
+<table border="1">
+    <tr>
+        <th>{{ "Linguagem" | ToUpper }}</th>
+        <th>Duração</th>
+    </tr>
+    {{ range . }}
+    <tr>
+        <td>{{ .Nome | ToUpper }}</td>
+        <td>{{ .CargaHoraria }}</td>
+    </tr>
+    {{ end }}
+</table>
+{{ template "footer.html" .}}
